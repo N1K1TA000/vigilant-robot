@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор резюме</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Блок введення даних -->
+        <section class="form-section">
+            <h2>Введення даних</h2>
+            <form id="resume-form">
+                <fieldset>
+                    <legend>Особисті дані</legend>
+                    <label>Ім'я та Прізвище: <input type="text" id="name" value="Нікіта Асютін" required></label>
+                    <label>Вік: <input type="number" id="age" value="19" required></label>
+                    <label>Місто: <input type="text" id="location" value="Київ" required></label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Освіта</legend>
+                    <label>Навчальний заклад: <input type="text" id="uni" value="ДУІКТ" required></label>
+                    <label>Спеціальність: <input type="text" id="spec" value="Інженерія програмного забезпечення" required></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Досвід роботи / Проекти</legend>
+                    <label>Опис: <textarea id="exp" rows="3" required>Розробка програми-менеджера для управління музичною колекцією (C# .NET)</textarea></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Навички (через кому)</legend>
+                    <label><input type="text" id="skills" value="C#, .NET, JavaScript, HTML, CSS, Blender 3D, Git" required></label>
+                </fieldset>
+
+                <button type="submit">Згенерувати резюме</button>
+                <button type="button" id="load-btn">Завантажити збережене</button>
+            </form>
+        </section>
+
+        <!-- Блок відображення -->
+        <section class="resume-section">
+            <h2>Готове резюме</h2>
+            <div id="resume-output" class="resume-paper">
+                <p class="placeholder-text">Заповніть форму, щоб побачити результат...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
